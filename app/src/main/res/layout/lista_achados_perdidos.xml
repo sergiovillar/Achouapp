@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginTop="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginRight="16dp"
+    android:id="@+id/layoutListaAchadosPerdidos"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvListaNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NOME:"
+        />
+
+    <TextView
+        android:id="@+id/tvListaDescri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DESCRIÇÃO:"
+        />
+
+
+    <TextView
+        android:id="@+id/tvListaEndereco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ENDEREÇO:"
+        />
+
+    <TextView
+        android:id="@+id/tvListaEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EMAIL:"
+        />
+
+    <TextView
+        android:id="@+id/tvListaTelefone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FONE:"
+        />
+    <TextView
+        android:id="@+id/tvListaTipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SITUACAO:"
+        />
+
+</LinearLayout>

@@ -1,0 +1,4 @@
+#Wed Dec 05 16:03:06 GFT 2018
+base.0=D\:\\Android\\AchadosePerdidos\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\59
+path.0=classes.dex
+renamed.0=classes.dex
