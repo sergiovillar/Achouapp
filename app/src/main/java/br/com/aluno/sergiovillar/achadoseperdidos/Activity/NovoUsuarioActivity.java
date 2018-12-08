@@ -24,18 +24,18 @@ public class NovoUsuarioActivity extends AppCompatActivity {
     private EditText edtNome, edtEmail, edtSenha, edtConfSenha;
     private Button btnSalvar, btnVoltar;
     private Usuarios usuario;
-    private FirebaseAuth autentica, autenticado;
+    private FirebaseAuth autentica;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_novo_usuario);
         getSupportActionBar().setTitle("Cadastro de usuário");
-        edtNome = (EditText) findViewById(R.id.edtNovoUsuNome);
-        edtEmail = (EditText) findViewById(R.id.edtNovoUusEmail);
-        edtSenha = (EditText) findViewById(R.id.edtNovoUsuSenha);
-        edtConfSenha = (EditText) findViewById(R.id.edtNovoUsuConfSenha);
-        btnVoltar = (Button) findViewById(R.id.btnNovoUusVoltar);
+        edtNome =  findViewById(R.id.edtNovoUsuNome);
+        edtEmail =  findViewById(R.id.edtNovoUusEmail);
+        edtSenha = findViewById(R.id.edtNovoUsuSenha);
+        edtConfSenha =  findViewById(R.id.edtNovoUsuConfSenha);
+        btnVoltar =  findViewById(R.id.btnNovoUusVoltar);
         btnVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,7 +43,7 @@ public class NovoUsuarioActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        btnSalvar = (Button) findViewById(R.id.btnNovoUusSalvar);
+        btnSalvar =  findViewById(R.id.btnNovoUusSalvar);
         btnSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,7 +71,7 @@ public class NovoUsuarioActivity extends AppCompatActivity {
                     usuario.salvar();
                     acessarLogin();
                 } else {
-                    String excep = "";
+                    String excep ;
                     try {
                         throw task.getException();
                     } catch (Exception e) {
