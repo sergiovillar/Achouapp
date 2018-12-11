@@ -9,14 +9,14 @@ public class ConexaoFirebase {
     private static DatabaseReference referencia;
     private static FirebaseAuth autentica;
 
-    public static DatabaseReference getFirebase() {
+    public static DatabaseReference getReferencia() {
         if (referencia == null) {
             referencia = FirebaseDatabase.getInstance().getReference();
         }
         return referencia;
     }
 
-    public static FirebaseAuth getAutentica() {
+    public static FirebaseAuth getInstancia() {
         if (autentica == null) {
             autentica = FirebaseAuth.getInstance();
         }

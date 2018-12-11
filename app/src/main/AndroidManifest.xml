@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
@@ -35,6 +36,7 @@
         <activity android:name=".Activity.NovoUsuarioActivity" />
         <activity android:name=".Activity.ListaAchadosActivity" />
         <activity android:name=".Activity.ReportarAchadoPerdidoActivity" />
+        <activity android:name=".Activity.PrincipalOcorrencias"></activity>
     </application>
 
 </manifest>

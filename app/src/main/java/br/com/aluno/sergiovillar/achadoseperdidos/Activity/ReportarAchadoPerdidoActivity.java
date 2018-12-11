@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 
 import java.util.UUID;
@@ -18,12 +20,14 @@ import br.com.aluno.sergiovillar.achadoseperdidos.Helper.ConexaoFirebase;
 import br.com.aluno.sergiovillar.achadoseperdidos.R;
 
 public class ReportarAchadoPerdidoActivity extends AppCompatActivity {
+    /*idOcorrencia, , uid;documento, descricao, localDoc, emailContato, foneContato, status*/
 
-    private EditText edtNome, edtDescri, edtEnd, edtEmail, edtFone;
-    private RadioButton rbAchado, rbPerdido;
+    private EditText edtDoc, edtDescri, edtLocalDoc, edtEmailContato, edtFoneContato;
+    private RadioButton rbStatusAchado, rbStatusPerdido;
     private Button btnSubmeter, btnVoltar;
     private AchadosPerdidos achadosPerdidos;
     private DatabaseReference ref;
+    private FirebaseAuth mAuth;
 
 
     @Override
@@ -31,41 +35,44 @@ public class ReportarAchadoPerdidoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reportar_perdido);
         getSupportActionBar().setTitle("Registrar Objeto");
-        edtNome= (EditText)findViewById(R.id.edtPerdNome);
+        edtDoc= (EditText)findViewById(R.id.edtPerdDoc);
         edtDescri= (EditText)findViewById(R.id.edtPerdDescri);
-        edtEnd= (EditText)findViewById(R.id.edtPerdEndereco);
-        edtEmail= (EditText)findViewById(R.id.edtPerdEmail);
-        edtFone= (EditText)findViewById(R.id.edtPerdTelefone);
-        rbAchado = (RadioButton)findViewById(R.id.rbAchado);
-        rbPerdido = (RadioButton)findViewById(R.id.rbPerdido);
-        btnSubmeter = (Button)findViewById(R.id.btnPublicar);
+        edtLocalDoc= (EditText)findViewById(R.id.edtPerdEndereco);
+        edtEmailContato= (EditText)findViewById(R.id.edtPerdEmail);
+        edtFoneContato= (EditText)findViewById(R.id.edtPerdTelefone);
+        rbStatusAchado = (RadioButton)findViewById(R.id.rbStatusAchado);
+        rbStatusPerdido = (RadioButton)findViewById(R.id.rbStatusPerdido);
+        btnSubmeter = (Button)findViewById(R.id.btnReportPublicar);
         btnVoltar = (Button)findViewById(R.id.btnReportVoltar);
 
         btnSubmeter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 achadosPerdidos = new AchadosPerdidos();
-                achadosPerdidos.setNome(edtNome.getText().toString());
+                achadosPerdidos.setDocumento(edtDoc.getText().toString());
                 achadosPerdidos.setDescricao(edtDescri.getText().toString());
-                achadosPerdidos.setEndereco(edtEnd.getText().toString());
-                achadosPerdidos.setEmailcontato(edtEmail.getText().toString());
-                achadosPerdidos.setTelefonecontato(edtFone.getText().toString());
-                if (rbAchado.isChecked()){
-                    achadosPerdidos.setTipo("Achado");
+                achadosPerdidos.setLocalDoc(edtLocalDoc.getText().toString());
+                achadosPerdidos.setEmailContato(edtEmailContato.getText().toString());
+                achadosPerdidos.setFoneContato(edtFoneContato.getText().toString());
+                mAuth = FirebaseAuth.getInstance();
+                FirebaseUser currentUser = mAuth.getCurrentUser();
+                achadosPerdidos.setUid(currentUser.getUid());
+                achadosPerdidos.setIdOcorrencia(UUID.randomUUID().toString());
+                if (rbStatusAchado.isChecked()){
+                    achadosPerdidos.setStatus("Achado");
                 }
-                if (rbPerdido.isChecked()){
-                    achadosPerdidos.setTipo("Perdido");
+                if (rbStatusPerdido.isChecked()){
+                    achadosPerdidos.setStatus("Perdido");
                 }
                 salvarreport(achadosPerdidos);
-
             }
         });
 
     }
     public boolean salvarreport(AchadosPerdidos achadosPerdidos){
         try{
-            ref = ConexaoFirebase.getFirebase();
-            ref.child("achados_perdidos").child(UUID.randomUUID().toString()).setValue(achadosPerdidos);
+            ref = ConexaoFirebase.getReferencia();
+            ref.child("ocorrencias").child(achadosPerdidos.getIdOcorrencia()).setValue(achadosPerdidos);
             Toast.makeText(ReportarAchadoPerdidoActivity.this, "Sucesso", Toast.LENGTH_LONG).show();
             limparTela();
             voltarInicial();
@@ -78,13 +85,13 @@ public class ReportarAchadoPerdidoActivity extends AppCompatActivity {
     }
 
     public void limparTela(){
-        edtNome.setText("");
+        edtDoc.setText("");
         edtDescri.setText("");
-        edtEnd.setText("");
-        edtEmail.setText("");
-        edtFone.setText("");
-        rbAchado.setChecked(false);
-        rbPerdido.setChecked(false);
+        edtLocalDoc.setText("");
+        edtEmailContato.setText("");
+        edtFoneContato.setText("");
+        rbStatusAchado.setChecked(false);
+        rbStatusPerdido.setChecked(false);
     }
     public void voltarInicial(){
         Intent intent = new Intent(ReportarAchadoPerdidoActivity.this, MainActivity.class);

@@ -34,6 +34,14 @@
         android:id="@+id/btnAcessarLogin"
         />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TESTE"
+        android:layout_marginTop="16dp"
+        android:id="@+id/btnTeste"
+        />
+
 
 
 </LinearLayout>
