@@ -1,26 +1,36 @@
 package br.com.aluno.sergiovillar.achadoseperdidos.Entidades;
 
 public class AchadosPerdidos {
-    String nome, descricao,  endereco, emailcontato, telefonecontato, tipo;
+    String idOcorrencia, documento, descricao, localDoc, emailContato, foneContato, status, uid;
 
     public AchadosPerdidos() {
     }
 
-    public AchadosPerdidos(String nome, String descricao, String endereco, String emailcontato, String telefonecontato, String tipo) {
-        this.nome = nome;
+    public AchadosPerdidos(String idOcorrencia, String documento, String descricao, String localDoc, String emailContato, String foneContato, String status, String uid) {
+        this.idOcorrencia = idOcorrencia;
+        this.documento = documento;
         this.descricao = descricao;
-        this.endereco = endereco;
-        this.emailcontato = emailcontato;
-        this.telefonecontato = telefonecontato;
-        this.tipo = tipo;
+        this.localDoc = localDoc;
+        this.emailContato = emailContato;
+        this.foneContato = foneContato;
+        this.status = status;
+        this.uid = uid;
     }
 
-    public String getNome() {
-        return nome;
+    public String getIdOcorrencia() {
+        return idOcorrencia;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setIdOcorrencia(String idOcorrencia) {
+        this.idOcorrencia = idOcorrencia;
+    }
+
+    public String getDocumento() {
+        return documento;
+    }
+
+    public void setDocumento(String documento) {
+        this.documento = documento;
     }
 
     public String getDescricao() {
@@ -31,35 +41,43 @@ public class AchadosPerdidos {
         this.descricao = descricao;
     }
 
-    public String getEndereco() {
-        return endereco;
+    public String getLocalDoc() {
+        return localDoc;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setLocalDoc(String localDoc) {
+        this.localDoc = localDoc;
     }
 
-    public String getEmailcontato() {
-        return emailcontato;
+    public String getEmailContato() {
+        return emailContato;
     }
 
-    public void setEmailcontato(String emailcontato) {
-        this.emailcontato = emailcontato;
+    public void setEmailContato(String emailContato) {
+        this.emailContato = emailContato;
     }
 
-    public String getTelefonecontato() {
-        return telefonecontato;
+    public String getFoneContato() {
+        return foneContato;
     }
 
-    public void setTelefonecontato(String telefonecontato) {
-        this.telefonecontato = telefonecontato;
+    public void setFoneContato(String foneContato) {
+        this.foneContato = foneContato;
     }
 
-    public String getTipo() {
-        return tipo;
+    public String getStatus() {
+        return status;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 }

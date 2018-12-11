@@ -37,12 +37,12 @@ public class AchadosPerdidosAdapter extends ArrayAdapter<AchadosPerdidos> {
             TextView txtTipo = (TextView)view.findViewById(R.id.tvListaTipo);
 
             AchadosPerdidos perdido = perdidos.get(position);
-            txtNome.setText("Objeto: "+(perdido.getNome()));
+            txtNome.setText("Objeto: "+(perdido.getDocumento()));
             txtDescri.setText("Descrição: "+(perdido.getDescricao()));
-            txtEmail.setText("Email: "+(perdido.getEmailcontato()));
-            txtFone.setText("Telefone: "+(perdido.getTelefonecontato()));
-            txtEndereco.setText("Local: "+(perdido.getEndereco()));
-            txtTipo.setText("Situação: "+(perdido.getTipo()));
+            txtEmail.setText("Email: "+(perdido.getEmailContato()));
+            txtFone.setText("Telefone: "+(perdido.getFoneContato()));
+            txtEndereco.setText("Local: "+(perdido.getLocalDoc()));
+            txtTipo.setText("Situação: "+(perdido.getStatus()));
 
         }
         return view;

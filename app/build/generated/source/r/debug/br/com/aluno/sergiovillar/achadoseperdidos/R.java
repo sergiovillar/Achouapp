@@ -3777,7 +3777,7 @@ public final class R {
     public static final int btnMainPerdidos=0x7f08002a;
     public static final int btnNovoUusSalvar=0x7f08002b;
     public static final int btnNovoUusVoltar=0x7f08002c;
-    public static final int btnPublicar=0x7f08002d;
+    public static final int btnReportPublicar=0x7f08002d;
     public static final int btnReportVoltar=0x7f08002e;
     public static final int buttonPanel=0x7f08002f;
     public static final int cancel_action=0x7f080030;
@@ -3813,9 +3813,9 @@ public final class R {
     public static final int edtNovoUsuSenha=0x7f08004e;
     public static final int edtNovoUusEmail=0x7f08004f;
     public static final int edtPerdDescri=0x7f080050;
-    public static final int edtPerdEmail=0x7f080051;
-    public static final int edtPerdEndereco=0x7f080052;
-    public static final int edtPerdNome=0x7f080053;
+    public static final int edtPerdDoc=0x7f080051;
+    public static final int edtPerdEmail=0x7f080052;
+    public static final int edtPerdEndereco=0x7f080053;
     public static final int edtPerdTelefone=0x7f080054;
     public static final int edtSenhaLogin=0x7f080055;
     public static final int end=0x7f080056;
@@ -3876,8 +3876,8 @@ public final class R {
     public static final int progress_circular=0x7f08008d;
     public static final int progress_horizontal=0x7f08008e;
     public static final int radio=0x7f08008f;
-    public static final int rbAchado=0x7f080090;
-    public static final int rbPerdido=0x7f080091;
+    public static final int rbStatusAchado=0x7f080090;
+    public static final int rbStatusPerdido=0x7f080091;
     public static final int right=0x7f080092;
     public static final int right_icon=0x7f080093;
     public static final int right_side=0x7f080094;

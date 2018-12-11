@@ -49,6 +49,7 @@
         <activity android:name="br.com.aluno.sergiovillar.achadoseperdidos.Activity.NovoUsuarioActivity" />
         <activity android:name="br.com.aluno.sergiovillar.achadoseperdidos.Activity.ListaAchadosActivity" />
         <activity android:name="br.com.aluno.sergiovillar.achadoseperdidos.Activity.ReportarAchadoPerdidoActivity" />
+        <activity android:name="br.com.aluno.sergiovillar.achadoseperdidos.Activity.PrincipalOcorrencias" />
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"

@@ -14,14 +14,14 @@
         android:id="@+id/tvListaNome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="NOME:"
+        android:text="DOCUMENTO:"
         />
 
     <TextView
         android:id="@+id/tvListaDescri"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="DESCRIÇÃO:"
+        android:text="INFORMAÇÕES:"
         />
 
 
@@ -29,21 +29,21 @@
         android:id="@+id/tvListaEndereco"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ENDEREÇO:"
+        android:text="LOCAL:"
         />
 
     <TextView
         android:id="@+id/tvListaEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="EMAIL:"
+        android:text="EMAIL CONTATO:"
         />
 
     <TextView
         android:id="@+id/tvListaTelefone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="FONE:"
+        android:text="FONE CONTATO:"
         />
     <TextView
         android:id="@+id/tvListaTipo"

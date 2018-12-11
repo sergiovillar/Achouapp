@@ -39,6 +39,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent  = new Intent(LoginActivity.this, NovoUsuarioActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         btnLogin = (Button) findViewById(R.id.btnLogin);
@@ -60,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void logar() {
-        autentica = ConexaoFirebase.getAutentica();
+        autentica = ConexaoFirebase.getInstancia();
         autentica.signInWithEmailAndPassword(usuario.getEmail(), usuario.getSenha()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {

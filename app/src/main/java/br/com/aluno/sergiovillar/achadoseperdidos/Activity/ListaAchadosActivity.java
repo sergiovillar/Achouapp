@@ -33,17 +33,16 @@ public class ListaAchadosActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_achados);
-        getSupportActionBar().setTitle("Lista de Objetos Registrados");
         listarDados();
 
     }
 
-    private void listarDados() {
+    public void listarDados() {
         listAchadosPerdidos = new ArrayList<AchadosPerdidos>();
         listaV = (ListView)findViewById(R.id.lvAchadosPerdidos);
         arrayAdapterAchadosPerdidos = new AchadosPerdidosAdapter(this, (ArrayList<AchadosPerdidos>) listAchadosPerdidos);
         listaV.setAdapter(arrayAdapterAchadosPerdidos);
-        ref = ConexaoFirebase.getFirebase().child("achados_perdidos");
+        ref = ConexaoFirebase.getReferencia().child("ocorrencias");
         valueEventListenerAchados = new ValueEventListener(){
 
             @Override
