@@ -875,6 +875,8 @@ id beginning
 id blocking
 id bottom
 id btnAcessarLogin
+id btnAltSalvar
+id btnAltVoltar
 id btnLogin
 id btnMainAchados
 id btnMainPerdidos
@@ -911,6 +913,11 @@ id dimensions
 id direct
 id disableHome
 id edit_query
+id edtAltDescri
+id edtAltDoc
+id edtAltEmail
+id edtAltEndereco
+id edtAltTelefone
 id edtEmailLogin
 id edtNovoUsuConfSenha
 id edtNovoUsuNome
@@ -957,7 +964,9 @@ id line3
 id listMode
 id list_item
 id lvAchadosPerdidos
+id lvFragAchados
 id lvFragOcor
+id lvFragPerdidos
 id masked
 id media_actions
 id message
@@ -981,6 +990,9 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
+id rbAltAchado
+id rbAltPerdido
+id rbAltRecuperado
 id rbStatusAchado
 id rbStatusPerdido
 id right
@@ -1103,12 +1115,13 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_editar_ocorrencia
 layout activity_lista_achados
 layout activity_login
 layout activity_main
 layout activity_novo_usuario
 layout activity_principal_ocorrencias
-layout activity_reportar_perdido
+layout activity_reportar_ocorrencia
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar

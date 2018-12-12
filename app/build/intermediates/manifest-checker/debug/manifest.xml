@@ -47,9 +47,10 @@
         </activity>
         <activity android:name="br.com.aluno.sergiovillar.achadoseperdidos.Activity.MainActivity" />
         <activity android:name="br.com.aluno.sergiovillar.achadoseperdidos.Activity.NovoUsuarioActivity" />
-        <activity android:name="br.com.aluno.sergiovillar.achadoseperdidos.Activity.ListaAchadosActivity" />
-        <activity android:name="br.com.aluno.sergiovillar.achadoseperdidos.Activity.ReportarAchadoPerdidoActivity" />
+        <activity android:name="br.com.aluno.sergiovillar.achadoseperdidos.Activity.ListaOcorrenciasActivity" />
+        <activity android:name="br.com.aluno.sergiovillar.achadoseperdidos.Activity.ReportarOcorrenciaActivity" />
         <activity android:name="br.com.aluno.sergiovillar.achadoseperdidos.Activity.PrincipalOcorrencias" />
+        <activity android:name="br.com.aluno.sergiovillar.achadoseperdidos.Activity.EditarOcorrenciaActivity" />
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"

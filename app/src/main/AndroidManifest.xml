@@ -34,9 +34,10 @@
         </activity>
         <activity android:name=".Activity.MainActivity" />
         <activity android:name=".Activity.NovoUsuarioActivity" />
-        <activity android:name=".Activity.ListaAchadosActivity" />
-        <activity android:name=".Activity.ReportarAchadoPerdidoActivity" />
-        <activity android:name=".Activity.PrincipalOcorrencias"></activity>
+        <activity android:name=".Activity.ListaOcorrenciasActivity" />
+        <activity android:name=".Activity.ReportarOcorrenciaActivity" />
+        <activity android:name=".Activity.PrincipalOcorrencias" />
+        <activity android:name=".Activity.EditarOcorrenciaActivity"></activity>
     </application>
 
 </manifest>

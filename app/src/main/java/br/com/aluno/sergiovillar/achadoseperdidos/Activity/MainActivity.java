@@ -5,7 +5,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 
 import br.com.aluno.sergiovillar.achadoseperdidos.R;
@@ -14,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btnAcessarLogin, btnAchados, btnPerdidos, btnTeste;
     private DatabaseReference ref;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,21 +38,21 @@ public class MainActivity extends AppCompatActivity {
         btnAchados.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentAchados = new Intent(MainActivity.this, ListaAchadosActivity.class);
-                startActivity(intentAchados);
+                mAuth = FirebaseAuth.getInstance();
+                FirebaseUser currentUser = mAuth.getCurrentUser();
+                Toast.makeText(MainActivity.this, "Teste"+currentUser.getUid(), Toast.LENGTH_LONG).show();
             }
         });
         btnPerdidos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentPerdidos = new Intent(MainActivity.this, ReportarAchadoPerdidoActivity.class);
+                Intent intentPerdidos = new Intent(MainActivity.this, ReportarOcorrenciaActivity.class);
                 startActivity(intentPerdidos);
             }
         });
         btnTeste.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Toast.makeText(MainActivity.this, "Teste", Toast.LENGTH_LONG).show();
                 Intent intentPerdidos = new Intent(MainActivity.this, PrincipalOcorrencias.class);
                 startActivity(intentPerdidos);
             }

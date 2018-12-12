@@ -19,7 +19,7 @@ import br.com.aluno.sergiovillar.achadoseperdidos.Entidades.AchadosPerdidos;
 import br.com.aluno.sergiovillar.achadoseperdidos.Helper.ConexaoFirebase;
 import br.com.aluno.sergiovillar.achadoseperdidos.R;
 
-public class ReportarAchadoPerdidoActivity extends AppCompatActivity {
+public class ReportarOcorrenciaActivity extends AppCompatActivity {
     /*idOcorrencia, , uid;documento, descricao, localDoc, emailContato, foneContato, status*/
 
     private EditText edtDoc, edtDescri, edtLocalDoc, edtEmailContato, edtFoneContato;
@@ -33,7 +33,7 @@ public class ReportarAchadoPerdidoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reportar_perdido);
+        setContentView(R.layout.activity_reportar_ocorrencia);
         getSupportActionBar().setTitle("Registrar Objeto");
         edtDoc= (EditText)findViewById(R.id.edtPerdDoc);
         edtDescri= (EditText)findViewById(R.id.edtPerdDescri);
@@ -73,7 +73,7 @@ public class ReportarAchadoPerdidoActivity extends AppCompatActivity {
         try{
             ref = ConexaoFirebase.getReferencia();
             ref.child("ocorrencias").child(achadosPerdidos.getIdOcorrencia()).setValue(achadosPerdidos);
-            Toast.makeText(ReportarAchadoPerdidoActivity.this, "Sucesso", Toast.LENGTH_LONG).show();
+            Toast.makeText(ReportarOcorrenciaActivity.this, "Sucesso", Toast.LENGTH_LONG).show();
             limparTela();
             voltarInicial();
             return true;
@@ -94,7 +94,7 @@ public class ReportarAchadoPerdidoActivity extends AppCompatActivity {
         rbStatusPerdido.setChecked(false);
     }
     public void voltarInicial(){
-        Intent intent = new Intent(ReportarAchadoPerdidoActivity.this, MainActivity.class);
+        Intent intent = new Intent(ReportarOcorrenciaActivity.this, MainActivity.class);
         startActivity(intent);
         finish();
     }

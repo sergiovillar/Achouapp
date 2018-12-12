@@ -5,23 +5,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="12dp"
-    android:layout_marginLeft="12dp"
-    android:layout_marginBottom="12dp"
-    android:layout_marginRight="12dp"
     android:orientation="vertical"
-    tools:context=".Activity.ReportarAchadoPerdidoActivity">
+    android:layout_margin="16dp"
+    tools:context=".Activity.EditarOcorrenciaActivity">
+
 
     <EditText
-        android:id="@+id/edtPerdDoc"
+        android:id="@+id/edtAltDoc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textFilter"
+        android:inputType="text"
         android:layout_marginTop="12dp"
         android:hint="Documento" />
 
     <EditText
-        android:id="@+id/edtPerdDescri"
+        android:id="@+id/edtAltDescri"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
@@ -29,7 +27,7 @@
         android:hint="Descrição do documento" />
 
     <EditText
-        android:id="@+id/edtPerdEndereco"
+        android:id="@+id/edtAltEndereco"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
@@ -37,7 +35,7 @@
         android:hint="Local em que foi deixado:" />
 
     <EditText
-        android:id="@+id/edtPerdEmail"
+        android:id="@+id/edtAltEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
@@ -45,7 +43,7 @@
         android:hint="Email contato" />
 
     <EditText
-        android:id="@+id/edtPerdTelefone"
+        android:id="@+id/edtAltTelefone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
@@ -57,35 +55,46 @@
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:gravity="center"
+        android:layout_marginTop="12dp"
         android:layout_height="wrap_content">
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/rbStatusAchado"
+            android:layout_margin="5dp"
+            android:id="@+id/rbAltAchado"
             android:text="Achado"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/rbStatusPerdido"
+            android:layout_margin="5dp"
+            android:id="@+id/rbAltPerdido"
             android:text="Perdido"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:id="@+id/rbAltRecuperado"
+            android:text="Recuperado"/>
     </RadioGroup>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginTop="12dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
         android:orientation="horizontal">
         <Button
-            android:id="@+id/btnReportPublicar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Publicar" />
+            android:id="@+id/btnAltSalvar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:text="Alterar" />
         <Button
-            android:id="@+id/btnReportVoltar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Voltar" />
+            android:id="@+id/btnAltVoltar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:text="Cancelar" />
 
     </LinearLayout>
 

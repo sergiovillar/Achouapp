@@ -18,6 +18,7 @@ public class PrincipalOcorrencias extends AppCompatActivity {
     private ViewPager viewPager;
     private ViewPagerAdapter adapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,8 +31,10 @@ public class PrincipalOcorrencias extends AppCompatActivity {
         adapter.AdicionarFragmento(new FragOcorrencias(), "Minhas Ocorrencias");
         adapter.AdicionarFragmento(new FragAchados(), "Achados");
         adapter.AdicionarFragmento(new FragPerdidos(), "Perdidos");
-
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
+
+
     }
+
 }

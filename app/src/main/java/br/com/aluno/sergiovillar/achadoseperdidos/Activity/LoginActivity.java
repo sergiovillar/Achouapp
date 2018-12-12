@@ -39,7 +39,6 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent  = new Intent(LoginActivity.this, NovoUsuarioActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
         btnLogin = (Button) findViewById(R.id.btnLogin);
@@ -53,7 +52,6 @@ public class LoginActivity extends AppCompatActivity {
                     usuario.setEmail(edtEmailLogin.getText().toString());
                     usuario.setSenha(edtSenhaLogin.getText().toString());
                     logar();
-
                 }
             }
         });
@@ -76,7 +74,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void carregarAplicacao() {
-        Intent intent  = new Intent(LoginActivity.this,MainActivity.class);
+        Intent intent  = new Intent(LoginActivity.this, PrincipalOcorrencias.class);
         startActivity(intent);
+        finish();
     }
 }

@@ -19,7 +19,7 @@ import br.com.aluno.sergiovillar.achadoseperdidos.Entidades.AchadosPerdidos;
 import br.com.aluno.sergiovillar.achadoseperdidos.Helper.ConexaoFirebase;
 import br.com.aluno.sergiovillar.achadoseperdidos.R;
 
-public class ListaAchadosActivity extends AppCompatActivity {
+public class ListaOcorrenciasActivity extends AppCompatActivity {
 
 
     private DatabaseReference ref;
